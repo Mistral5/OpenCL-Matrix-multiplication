@@ -938,14 +938,6 @@ int main(int argc, char* argv[])
 			return 1;
 		}
 
-		FILE* outputFile = fopen(argv[3], "wb");
-		if (outputFile == NULL)
-		{
-			fprintf(stderr, "Output file open error!\n");
-			free(resultMatrix);
-			return 1;
-		}
-
 		if (writeFile(outputFile, resultMatrix, &size))
 		{
 			fprintf(stderr, "File write error!\n");
